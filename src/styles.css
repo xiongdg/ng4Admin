@@ -2,7 +2,15 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body{
     background-color: #c2c2c2;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 .center{
     text-align: center;
+}
+
+.fullwidth{
+    width: 100%;
 }
