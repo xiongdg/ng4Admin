@@ -1,40 +1,73 @@
 <div class="headerWrap">
-<div class="fullwidth" class="topNav">
-    <mat-toolbar color="primary">
-        <mat-toolbar-row>
-            <span>
-              <img src="http://www.sigmapoint.pl/images/icons/technologies_icons-06.png" class="sideLogo">
-              Third Line</span>  <mat-icon >menu</mat-icon>
-            <span class="example-spacer"></span>
+    <div class="fullwidth" class="topNav">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <span>
+                <img src="http://www.sigmapoint.pl/images/icons/technologies_icons-06.png" class="sideLogo">
+                Third Line</span>  <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+                <span class="example-spacer"  ></span>
+                <mat-icon >format_color_fill</mat-icon>
+                <mat-icon >notifications</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </mat-toolbar-row>
+        </mat-toolbar>    
+    </div>
+    <div class="fullwidth content-box">
+            <mat-sidenav-container class="adm-sidenav-fab-container">
+                    <mat-sidenav #sidenav mode="side" opened="true" class="sidebarWrap">
+                    <div class="adm-scrolling-content">
+                            <mat-list>
+                                    <mat-list-item> <mat-icon >dashboard</mat-icon> Dashboard </mat-list-item>
+                                    <mat-list-item><mat-icon >mail</mat-icon> Mailbox</mat-list-item>
+                                    <mat-list-item><mat-icon >date_range</mat-icon> Calender</mat-list-item>
+                                    <mat-list-item><mat-icon >invert_colors</mat-icon> CSS</mat-list-item>
+                                    <mat-list-item><mat-icon >color_lens</mat-icon> UI Elements</mat-list-item>
+                                    <mat-list-item><mat-icon >widgets</mat-icon> Widgets</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Tables</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Forms</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Pages</mat-list-item>
+                                    <mat-list-item><mat-icon >add_a_photo</mat-icon> Medias</mat-list-item>
+                                    <mat-list-item><mat-icon >insert_chart</mat-icon>Charts</mat-list-item>
+                                    <mat-list-item> <mat-icon >dashboard</mat-icon> Dashboard </mat-list-item>
+                                    <mat-list-item><mat-icon >mail</mat-icon> Mailbox</mat-list-item>
+                                    <mat-list-item><mat-icon >date_range</mat-icon> Calender</mat-list-item>
+                                    <mat-list-item><mat-icon >invert_colors</mat-icon> CSS</mat-list-item>
+                                    <mat-list-item><mat-icon >color_lens</mat-icon> UI Elements</mat-list-item>
+                                    <mat-list-item><mat-icon >widgets</mat-icon> Widgets</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Tables</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Forms</mat-list-item>
+                                    <mat-list-item><mat-icon >dashboard</mat-icon> Pages</mat-list-item>
+                                    <mat-list-item><mat-icon >add_a_photo</mat-icon> Medias</mat-list-item>
+                                    <mat-list-item><mat-icon >insert_chart</mat-icon>Charts</mat-list-item>
+                                </mat-list>
+                    </div>
+                    </mat-sidenav>
+                    
+                    <div class="adm-scrolling-content">
+                    
+                    <router-outlet></router-outlet>
+                    </div>
+                </mat-sidenav-container>
 
-            <mat-icon >format_color_fill</mat-icon>
-            <mat-icon >notifications</mat-icon>
-            <mat-icon>more_vert</mat-icon>
-
-            
-          </mat-toolbar-row>
-      </mat-toolbar>    
-</div>
-<div class="fullwidth">
-  <div class="sidebarWrap">
-      <mat-list>
-          <mat-list-item> <mat-icon >dashboard</mat-icon> Dashboard </mat-list-item>
-          <mat-list-item><mat-icon >mail</mat-icon> Mailbox</mat-list-item>
-          <mat-list-item><mat-icon >date_range</mat-icon> Calender</mat-list-item>
-          <mat-list-item><mat-icon >invert_colors</mat-icon> CSS</mat-list-item>
-          <mat-list-item><mat-icon >color_lens</mat-icon> UI Elements</mat-list-item>
-          <mat-list-item><mat-icon >widgets</mat-icon> Widgets</mat-list-item>
-          <mat-list-item><mat-icon >dashboard</mat-icon> Tables</mat-list-item>
-          <mat-list-item><mat-icon >dashboard</mat-icon> Forms</mat-list-item>
-          <mat-list-item><mat-icon >dashboard</mat-icon> Pages</mat-list-item>
-          <mat-list-item><mat-icon >add_a_photo</mat-icon> Medias</mat-list-item>
-          <mat-list-item><mat-icon >insert_chart</mat-icon>Charts</mat-list-item>
-        </mat-list>
-  </div>
-  <div class="contentWrap">
-      <router-outlet></router-outlet>
-  </div>
-</div>
+    <!-- <div class="sidebarWrap">
+        <mat-list>
+            <mat-list-item> <mat-icon >dashboard</mat-icon> Dashboard </mat-list-item>
+            <mat-list-item><mat-icon >mail</mat-icon> Mailbox</mat-list-item>
+            <mat-list-item><mat-icon >date_range</mat-icon> Calender</mat-list-item>
+            <mat-list-item><mat-icon >invert_colors</mat-icon> CSS</mat-list-item>
+            <mat-list-item><mat-icon >color_lens</mat-icon> UI Elements</mat-list-item>
+            <mat-list-item><mat-icon >widgets</mat-icon> Widgets</mat-list-item>
+            <mat-list-item><mat-icon >dashboard</mat-icon> Tables</mat-list-item>
+            <mat-list-item><mat-icon >dashboard</mat-icon> Forms</mat-list-item>
+            <mat-list-item><mat-icon >dashboard</mat-icon> Pages</mat-list-item>
+            <mat-list-item><mat-icon >add_a_photo</mat-icon> Medias</mat-list-item>
+            <mat-list-item><mat-icon >insert_chart</mat-icon>Charts</mat-list-item>
+            </mat-list>
+    </div> -->
+    <!-- <div class="contentWrap">
+        
+    </div> -->
+    </div>
 </div>
 
 
